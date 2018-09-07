@@ -14,6 +14,7 @@ class RestaurantTableSeeder extends Seeder
         for($i = 0; $i < 50; $i++){
             \DB::table('restaurants')->insert([
                 'name' => 'Restaurant'.$i,
+                'description' => 'TIPORestaurant'.$i,
             ]);
         }
     }

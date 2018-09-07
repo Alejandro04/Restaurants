@@ -10,4 +10,10 @@ class RestaurantController extends Controller
         $item = Restaurant::all();
         return response()->json(['restaurants' => $item], 200);
     }
+
+    public function show($id){
+     //   return "ok";
+        $item = Restaurant::find($id);
+        return response()->json(['restaurante' => $item], 200);
+    }
 }

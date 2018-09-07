@@ -22,3 +22,8 @@ $router->get('/test', function () use ($router) {
 $router->get('restaurants', [
     'as' => 'restaurants', 'uses' => 'RestaurantController@index'
 ]);
+
+$router->get('restaurante/{id}', [
+    'as' => 'restaurante', 'uses' => 'RestaurantController@show'
+]);
+
