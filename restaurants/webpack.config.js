@@ -50,9 +50,7 @@ module.exports = {
     noInfo: true,
     overlay: true,
     proxy: {
-      context: ['/restaurante/**'],
-      target: 'http://localhost:8000',
-      changeOrigin: true
+      '/api': 'http://localhost:8000'
     },
   },
   performance: {

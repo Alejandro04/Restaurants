@@ -39,7 +39,7 @@ export default {
   },
   methods:{
     getRestaurants(){  
-        axios.get('http://localhost:8000/restaurants')
+        axios.get('http://localhost:8000/api/restaurants')
         .then(response =>{
           this.restaurantes = response.data.restaurants
         })

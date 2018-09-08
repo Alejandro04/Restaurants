@@ -19,14 +19,14 @@ $router->get('/test', function () use ($router) {
     return "test";
 });
 
-$router->get('restaurants', [
+$router->get('/api/restaurants', [
     'as' => 'restaurants', 'uses' => 'RestaurantController@index'
 ]);
 
-$router->get('restaurants/{id}', [
+$router->get('/api/restaurants/{id}', [
     'as' => 'restaurante', 'uses' => 'RestaurantController@show'
 ]);
 
-$router->post('restaurants', 'RestaurantController@store');
+$router->post('/api/restaurants', 'RestaurantController@store');
 
 
