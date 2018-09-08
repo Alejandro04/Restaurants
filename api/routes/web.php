@@ -23,10 +23,10 @@ $router->get('restaurants', [
     'as' => 'restaurants', 'uses' => 'RestaurantController@index'
 ]);
 
-$router->get('restaurante/{id}', [
+$router->get('restaurants/{id}', [
     'as' => 'restaurante', 'uses' => 'RestaurantController@show'
 ]);
 
-$router->post('restaurante', 'RestaurantController@store');
+$router->post('restaurants', 'RestaurantController@store');
 
 

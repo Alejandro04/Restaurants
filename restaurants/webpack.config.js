@@ -48,7 +48,12 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    overlay: true
+    overlay: true,
+    proxy: {
+      context: ['/restaurante/**'],
+      target: 'http://localhost:8000',
+      changeOrigin: true
+    },
   },
   performance: {
     hints: false

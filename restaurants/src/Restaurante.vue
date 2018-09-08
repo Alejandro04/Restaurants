@@ -30,7 +30,7 @@ export default {
   methods:{
     getRestaurant(){  
         console.log("re")
-        axios.get('http://localhost:8000/restaurante/'+this.id)
+        axios.get('http://localhost:8000/restaurants/'+this.id)
         .then(response =>{
           console.log("rest"+response)
           this.restaurante = response.data.restaurante

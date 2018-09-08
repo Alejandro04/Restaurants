@@ -36,7 +36,7 @@ export default {
     methods: {
         guardarRestaurante(){
             console.log(this.restaurante)
-            axios.post("http://localhost:8000/restaurante", this.restaurante)
+            axios.post("http://localhost:8000/restaurants", this.restaurante)
                 .then((response) =>{
                     console.log(response)
                 })
