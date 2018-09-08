@@ -5,6 +5,7 @@
     <ul>
       <li><router-link to= "/">Home</router-link></li>
       <li><router-link to= "/restaurantes">Restaurantes</router-link></li>
+      <li><router-link to= "/restaurante-add">Agregar Restaurante</router-link></li>
       <li><router-link to= "/contacto">Contacto</router-link></li>
     </ul>
 

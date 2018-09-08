@@ -5,6 +5,7 @@ import Home from './Home.vue'
 import Favoritos from './Favoritos.vue'
 import Restaurantes from './Restaurantes.vue'
 import Restaurante from './Restaurante.vue'
+import RestauranteAdd from './RestauranteAdd.vue'
 import Contacto from './Contacto.vue'
 
 Vue.use(VueRouter)
@@ -13,6 +14,7 @@ const routes = [
   {path: '/', component: Home },
   {path: '/restaurantes', component: Restaurantes },
   {path: '/restaurante/:id', component: Restaurante },
+  {path: '/restaurante-add', component: RestauranteAdd },
   {path: '/favorito/:id', component: Favoritos },
   {path: '/contacto', component: Contacto },
 ]
@@ -26,6 +28,7 @@ Vue.component('home', Home)
 Vue.component('favoritos', Favoritos)
 Vue.component('restaurantes', Restaurantes)
 Vue.component('restaurante', Restaurante)
+Vue.component('restauranteadd', RestauranteAdd)
 Vue.component('contacto', Contacto)
 
 new Vue({
