@@ -27,6 +27,6 @@ $router->get('restaurante/{id}', [
     'as' => 'restaurante', 'uses' => 'RestaurantController@show'
 ]);
 
-$router->post('/restaurante', 'RestaurantController@store');
+$router->post('restaurante', 'RestaurantController@store');
 
 

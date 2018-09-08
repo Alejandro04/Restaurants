@@ -65,7 +65,7 @@ $app->singleton(
 
 $app->routeMiddleware([
     //'auth' => App\Http\Middleware\Authenticate::class,
-    'csrf' => 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken',
+    'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
 ]);
 
 /*
