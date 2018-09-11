@@ -28,5 +28,3 @@ $router->get('/api/restaurants/{id}', [
 ]);
 
 $router->post('/api/restaurants', 'RestaurantController@store');
-
-

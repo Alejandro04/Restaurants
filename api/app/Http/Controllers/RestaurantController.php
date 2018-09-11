@@ -16,12 +16,14 @@ class RestaurantController extends Controller
         return response()->json(['restaurante' => $item], 200);
     }
 
-    public function store(Request $request){     
+    public function store(Request $request){   
 
+        $data = json_decode($request->json, true);
         $item = Restaurant::create([
-            'name' => $request->name,
-            'description' => $request->description,
-        ]);     
+            'name' => $data['nombre'],
+            'description' => $data['nombre'],
+        ]);    
+
         return response()->json(['mensaje' => 'Restaurant registrado exitosamente', 'object' => $item], 200);
     }
 }

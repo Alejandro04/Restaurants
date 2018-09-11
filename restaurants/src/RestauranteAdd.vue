@@ -36,7 +36,10 @@ export default {
     methods: {
         guardarRestaurante(){
             console.log(this.restaurante)
-            axios.post("http://localhost:8000/api/restaurants", this.restaurante)
+
+            var params = "json="+JSON.stringify(this.restaurante)
+            console.log(params)
+            axios.post("http://localhost:8000/api/restaurants", params)
                 .then((response) =>{
                     console.log(response)
                 })
