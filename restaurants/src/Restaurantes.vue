@@ -1,8 +1,11 @@
 <template>
   <div>
     <h2>{{text}}</h2>
+
+     <input type="text" name="search" v-model="namerestaurant" placeholder="Buscar Restaurantes">
+
      <ul v-if="restaurantes != null" class="list">
-      <li v-for="item in restaurantes">
+      <li v-for="item in searchUser">
         <strong>{{ item.name }}</strong>
       </li>
     </ul>
@@ -35,6 +38,7 @@ export default {
     return {
       text: 'Lading de restaurantes',
       restaurantes: null,
+      namerestaurant: null,
     }
   },
   methods:{
@@ -46,6 +50,11 @@ export default {
         .catch(error =>{
         console.log(error);
         })
+    }
+  },
+  computed: {
+    searchUser: function(){
+      return this.restaurantes.filter((item => item.name.includes(this.namerestaurant)))
     }
   }
 }

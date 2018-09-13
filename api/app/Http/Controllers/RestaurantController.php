@@ -21,7 +21,7 @@ class RestaurantController extends Controller
         $data = json_decode($request->json, true);
         $item = Restaurant::create([
             'name' => $data['nombre'],
-            'description' => $data['nombre'],
+            'description' => $data['apellido'],
         ]);    
 
         return response()->json(['mensaje' => 'Restaurant registrado exitosamente', 'object' => $item], 200);
